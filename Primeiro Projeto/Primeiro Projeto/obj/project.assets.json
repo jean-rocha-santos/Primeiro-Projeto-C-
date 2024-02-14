@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alfa User\\source\\repos\\Primeiro Projeto\\Primeiro Projeto\\Primeiro Projeto.csproj",
+      "projectUniqueName": "C:\\Users\\Alfa User\\source\\repos\\Primeiro-Projeto-C-Sharp\\Primeiro Projeto\\Primeiro Projeto\\Primeiro Projeto.csproj",
       "projectName": "Primeiro Projeto",
-      "projectPath": "C:\\Users\\Alfa User\\source\\repos\\Primeiro Projeto\\Primeiro Projeto\\Primeiro Projeto.csproj",
+      "projectPath": "C:\\Users\\Alfa User\\source\\repos\\Primeiro-Projeto-C-Sharp\\Primeiro Projeto\\Primeiro Projeto\\Primeiro Projeto.csproj",
       "packagesPath": "C:\\Users\\Alfa User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alfa User\\source\\repos\\Primeiro Projeto\\Primeiro Projeto\\obj\\",
+      "outputPath": "C:\\Users\\Alfa User\\source\\repos\\Primeiro-Projeto-C-Sharp\\Primeiro Projeto\\Primeiro Projeto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

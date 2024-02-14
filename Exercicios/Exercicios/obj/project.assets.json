@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alfa User\\source\\repos\\Exercicios\\Exercicios\\Exercicios.csproj",
+      "projectUniqueName": "C:\\Users\\Alfa User\\source\\repos\\Primeiro-Projeto-C-Sharp\\Exercicios\\Exercicios\\Exercicios.csproj",
       "projectName": "Exercicios",
-      "projectPath": "C:\\Users\\Alfa User\\source\\repos\\Exercicios\\Exercicios\\Exercicios.csproj",
+      "projectPath": "C:\\Users\\Alfa User\\source\\repos\\Primeiro-Projeto-C-Sharp\\Exercicios\\Exercicios\\Exercicios.csproj",
       "packagesPath": "C:\\Users\\Alfa User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alfa User\\source\\repos\\Exercicios\\Exercicios\\obj\\",
+      "outputPath": "C:\\Users\\Alfa User\\source\\repos\\Primeiro-Projeto-C-Sharp\\Exercicios\\Exercicios\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -14,6 +14,8 @@
 
 ///////////////////////////////
 /////
+using System;
+
 string msgBoasVindas = "Boas vindas ao Screen Sound";
 //List<string> listasDasBandas = new List<string> { "Charlie Brown","Banda do Mar",
 //    "Gilsons","Legião Urbana" };
@@ -51,7 +53,7 @@ void ExibirOpcoesMenu()
             break;
         case 3: AvaliarBanda();
             break;
-        case 4: Console.WriteLine("Você escolheu a opção "+ opcaoEscolhidaNumero );
+        case 4: MediaBanda();
             break;
         case -1: Console.WriteLine("Até a próxima :) "+ opcaoEscolhidaNumero );
             break;
@@ -99,7 +101,6 @@ void ExibirTituloOpcoes(string titulo)
     Console.WriteLine(titulo);
     Console.WriteLine(asteristicos+"\n");
 }
-
 void AvaliarBanda()
 {
     Console.Clear();
@@ -107,6 +108,7 @@ void AvaliarBanda()
     Console.Write("Digite a banda que quer avaliar: ");
     string nomeDaBanda =Console.ReadLine()!;
     if (bandasRegistradas.ContainsKey(nomeDaBanda))
+    /*ContainsKey=Utilizado para verificar se um dicionário contém uma chave específica. Em C#*/
     {
         Console.Write($"Qual nota que a banda {nomeDaBanda} merece: ");
         int nota = int.Parse(Console.ReadLine()!);
@@ -120,18 +122,63 @@ void AvaliarBanda()
         string msgErro="Digite A para tentar novamente, ou digite qualquer tecla para retornar ao menu.";
         Console.WriteLine(msgErro);
         string opcaoEscolhida =Console.ReadLine()!.ToUpper();
-        Thread.Sleep(4000);        
-        Console.WriteLine("Teste1");
-
+        Thread.Sleep(2000);        
         if (opcaoEscolhida == "A")
         {
-            Console.WriteLine("teste");
+            
             AvaliarBanda();
         } else 
-        {
-            Console.WriteLine("Teste2");
+        {     
             ExibirOpcoesMenu();
         } 
+    }
+}
+void MediaBanda()
+{
+    Console.Clear();
+    ExibirTituloOpcoes("Média das Bandas");
+    Console.WriteLine("Digite o nome da banda: ");
+    string nomeBandaConsulta=Console.ReadLine()!;
+    if (bandasRegistradas.ContainsKey(nomeBandaConsulta))
+    /*ContainsKey=Utilizado para verificar se um dicionário contém uma chave específica. Em C#*/
+    {
+        List<int> consultaMedia = bandasRegistradas[nomeBandaConsulta];
+
+        /*indo até as notas da banda e registrando
+        int total = 0;
+        for (int rodada = 0; rodada < consultaMedia.Count; rodada++)
+        {
+            total += consultaMedia[rodada];
+        }
+        total /= consultaMedia.Count;*/
+
+        // MÉTODO AVERAGE  //
+        Console.WriteLine($"A média da banda {nomeBandaConsulta} é: {consultaMedia.Average()}");
+        /*Console.WriteLine($"A média da banda {nomeBandaConsulta} é: {total}");*/
+        Thread.Sleep(2000);
+        Console.WriteLine("Digite A para buscar uma média de outra banda," +
+            " ou qualquer outra tecla para retornar ao menu.");
+        // Average()= um método utilizado para calcular a média de uma coleção de valores numéricos.
+        string opcaoEscolhida = Console.ReadLine()!.ToUpper();
+        if (opcaoEscolhida == "A")
+        {
+            MediaBanda();
+        }else
+        {
+            ExibirOpcoesMenu();
+        }
+    } else
+    {
+        Console.WriteLine($"\nA banda {nomeBandaConsulta} não foi encontrada");
+        string msgErro = "Digite A para tentar novamente, ou digite qualquer tecla para retornar ao menu.";
+        Console.WriteLine(msgErro);
+        string opcaoEscolhida = Console.ReadLine()!.ToUpper();
+        if (opcaoEscolhida == "A") {
+            MediaBanda();
+        } else
+        {
+            ExibirOpcoesMenu();
+        }
     }
 }
 ExibirOpcoesMenu();
